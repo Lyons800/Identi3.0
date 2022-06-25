@@ -1,6 +1,8 @@
 import { useState } from "react";
 import "./PageContent.css";
 import logo from "~/assets/logo.svg";
+import browser from "webextension-polyfill";
+
 
 function PageContent(props) {
   const imageUrl = new URL(logo, import.meta.url).href;
@@ -13,6 +15,9 @@ function PageContent(props) {
       <h1>{props.children}</h1>
       <button type="button" onClick={() => setCount((count) => count + 1)}>
         Count: {count}
+      </button>
+      <button type="button" onClick={()=> { browser.runtime.openOptionsPage() }}>
+      Options
       </button>
     </div>
   );
