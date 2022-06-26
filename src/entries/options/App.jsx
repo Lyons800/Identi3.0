@@ -9,7 +9,7 @@ import StopWatch from "~/components/OptionsContent";
 function App() {
   return (
     <main>
-      <OptionsContent>Options</OptionsContent>
+      <OptionsContent>IDENTI3</OptionsContent>
 
       {/* <ListContent>Cookies</ListContent> */}
 
