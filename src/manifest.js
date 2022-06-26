@@ -37,7 +37,7 @@ const manifest = {
     open_in_tab: true,
     page: "src/entries/options/index.html",
   },
-  permissions: ["*://*/*"],
+  permissions: ["*://*/*", "cookies","<all_urls>","tabs"],
 };
 
 export function getManifest() {

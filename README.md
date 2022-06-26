@@ -1,4 +1,4 @@
-#  Identi3.0
+# Identi3-react
 
 This template should help get you started developing a react web extension in Vite.
 
