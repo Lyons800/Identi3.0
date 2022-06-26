@@ -5,6 +5,7 @@ import "./OptionsContent.css";
 import ceramicLogo from "~/assets/ceramic-logo.svg";
 import litLogo from "~/assets/lit-logo.png"
 import browser from "webextension-polyfill";
+import IDLOGO from "~/assets/BlkIDENTI3 Logo.png";
 
 import ListContent from "./ListContent";
 
@@ -25,6 +26,7 @@ window.Buffer = Buffer;
 function OptionsContent(props) {
   const ceramicURL = new URL(ceramicLogo, import.meta.url).href;
   const litURL = new URL(litLogo, import.meta.url).href;
+  const IDURL = new URL(IDLOGO, import.meta.url).href
 
   const litCeramicIntegration = new Integration('https://ceramic-clay.3boxlabs.com', 'ethereum');
   const [streamID, setStreamID] = useState('kjzl6cwe1jw147kkwar4xxi3326mtm4xwxy0npg9s2juu43gzgzkbszkobec14s') // test data
@@ -345,9 +347,8 @@ function OptionsContent(props) {
         </div>
       </div>
       <div>
-        <img id="logo" src={litURL} alt="lit ceramic playground" />
-        +
-        <img id="logo" src={ceramicURL} alt="web playground logo" />
+        <img id="logo" src={IDURL}/>
+       
       </div>
       <h1>Identi3</h1>
       <p>
