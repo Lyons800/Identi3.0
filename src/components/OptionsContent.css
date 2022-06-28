@@ -218,3 +218,41 @@ make it thinner, then set it to again wrap around the entire parent element.
   transform: translate(-50%, -50%);
 }
 
+.buttons {
+  padding: 2em;
+
+}
+
+#readDecrypt, #startStopSession, #import, #writeDecrypt {
+  padding: 1em;
+
+}
+
+#readDecrypt > button:nth-child(1),#rwriteEncrypt > button:nth-child(1) ,#startStopSession > button:nth-child(1),#import > button:nth-child(1){
+
+padding: 1em;
+border-radius: 25px;
+background-color: white;
+border-width: thick;
+border-block-color: black;
+border-color: black;
+max-width: 300px;
+width: 100%;
+
+}
+
+#readDecrypt > button:nth-child(1):hover, #writeEncrypt > button:nth-child(1):hover ,#startStopSession > button:nth-child(1):hover,#import > button:nth-child(1):hover{
+
+  background-color: grey;
+  opacity: 0.8;
+}
+
+.checkList {
+  overflow: auto;
+}
+
+
+.title{
+  padding-top: 1em;
+}
+  

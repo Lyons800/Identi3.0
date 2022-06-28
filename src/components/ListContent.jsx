@@ -34,7 +34,7 @@ export default function ListContent(props) {
   return (
     <div className="app">
       <div className="checkList">
-        <div className="title">Your CheckList:</div>
+        <div className="title">Cookies</div>
         <div className="list-container">
           { props.cookieListProp != undefined ?
 
@@ -52,7 +52,7 @@ export default function ListContent(props) {
       </div>
       <button type="button" onClick={() => {console.log(props)}}> Read Props </button> 
       <div>
-        {`Items checked are: ${checkedItems}`}
+        {`Cookies Selected ${checkedItems}`}
       </div>
     </div>
 
