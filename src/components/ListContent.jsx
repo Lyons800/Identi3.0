@@ -50,7 +50,7 @@ export default function ListContent(props) {
           }
         </div>
       </div>
-      <button type="button" onClick={() => {console.log(props)}}> Read Props </button> 
+      {/* <button type="button" onClick={() => {console.log(props)}}> Read Props </button>  */}
       <div>
         {`Cookies Selected ${checkedItems}`}
       </div>
