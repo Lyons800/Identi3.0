@@ -4,8 +4,10 @@
   align-items: center;
   flex-direction: column;
   gap: 20px;
-  height: 100vh;
+  height: auto;
+  padding-bottom: 5em;
 }
+
 .title {
   font-size: 22px;
   margin-bottom: 10px;
