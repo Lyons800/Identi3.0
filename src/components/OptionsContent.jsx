@@ -48,7 +48,7 @@ function OptionsContent(props) {
   const [hiddenRead, setHiddenRead] = useState(false);
   const [hiddenRead1, setHiddenRead1] = useState(false);
   const [hiddenRead2, setHiddenRead2] = useState(false);
-  const [hiddenRead3, setHiddenRead3] = useState(false);
+  const [hiddenReadImportButton, sethiddenReadImportButton] = useState(false);
   const [hiddenRead5, setHiddenRead5] = useState(false);
   const [hiddenReadList, setHiddenReadList] = useState(true); //hiddenread state for Cookies list 
   const [hiddenReadDecrypt, setHiddenReadDecrypt] = useState(false); 
@@ -373,7 +373,7 @@ function OptionsContent(props) {
     
       streamID === '' ?  null : 
       
-      <button type="button" onClick={() => {read_and_decryptCeramic(); setHiddenRead(false); setHiddenRead3(true), setHiddenReadList(true); }}> Choose cookies to import from IDENTi3 </button>
+      <button type="button" onClick={() => {read_and_decryptCeramic(); setHiddenRead(false); sethiddenReadImportButton(true), setHiddenReadList(true); }}> Choose cookies to import from IDENTi3 </button>
       
       }
 
@@ -395,28 +395,26 @@ function OptionsContent(props) {
                <button type="button" onClick={() => { logStores(); sethiddenReadSessionStartClose(true); }}> Close Session  </button> }
       </div>
 
-      <div id="import">
-      {/* {  hiddenRead2  && <button type="button" onClick={logStores}> Close Session  </button> } */}
-      {  hiddenRead3  && <button type="button" onClick={() => { storeCookies(cookieList), setHiddenReadList(true); }}> Import from IDENTI3 to browser </button> }
+      <div id="import"> {//on import button click, store the cookie list and also set the cookie list read to true}
+
+      {/* {  hiddenRead2  && <button type="button" onClick={logStores}> Close Session  </button> } */} 
+      {  hiddenReadImportButton  && <button type="button" onClick={() => { storeCookies(cookieList), setHiddenReadList(true); }}> Import from IDENTI3 to browser </button> }
       </div>
     </div>
 
-
       {sessionStarted == true ? <h3> Session Started</h3> : <h3> Session Not Started </h3>}
-
+      
       <div className="Control-Buttons"> 
         <div>{props.active ? ActiveButtons : StartButton}</div>                                                                                                                                                    
       </div>
 
-      {  hiddenRead5  && <button type="button" onClick={() => { write_and_encryptCeramic(); setSessionStarted(false), setHiddenRead5(false); } }> (export Cookies)  </button> }
-
+      {  hiddenRead5  && <button type="button" onClick={() => {write_and_encryptCeramic(); setSessionStarted(false), setHiddenRead5(false); } }> (export Cookies)  </button> }
 
 {hiddenReadList && 
 
       <ListContent cookieListProp={cookieList}> </ListContent> 
 }
     </div>
-
 
   );
 }
